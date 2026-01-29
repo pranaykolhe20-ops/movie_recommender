@@ -17,10 +17,10 @@ RUN mkdir -p Data/processed
 
 # download model files (REPLACE LINKS)
 RUN wget -O Data/processed/movies_dict.pkl \
-https://drive.google.com/file/d/1oXnPvtImlZIyPc2S5xFP8Cscl4rkvVYg/view?usp=drive_link
+https://drive.google.com/file/d/1oXnPvtImlZIyPc2S5xFP8Cscl4rkvVYg/view?usp=sharing
 
 RUN wget -O Data/processed/similarity.pkl \
-https://drive.google.com/file/d/1v9gYyQaOBsFcFcXVAwCEeIS7tB5tkhxA/view?usp=drive_link
+https://drive.google.com/file/d/1v9gYyQaOBsFcFcXVAwCEeIS7tB5tkhxA/view?usp=sharing
 
 # render expects this
 ENV PORT=10000
