@@ -16,14 +16,11 @@ COPY . .
 RUN mkdir -p Data/processed
 
 # download model files (REPLACE LINKS)
+RUN wget -O Data/processed/movies_dict.pkl \
+https://huggingface.co/datasets/pranayy2026/movie-rec-data/blob/main/movies_dict.pkl
 
-RUN mkdir -p Data/processed
-
-# download files
-RUN wget -O Data/processed/movies_dict.pkl 1oXnPvtImlZIyPc2S5xFP8Cscl4rkvVYg && \
-    wget -O Data/processed/similarity.pkl 1v9gYyQaOBsFcFcXVAwCEeIS7tB5tkhxA && \
-    ls -lh Data/processed
-
+RUN wget -O Data/processed/similarity.pkl \
+https://huggingface.co/datasets/pranayy2026/movie-rec-data/blob/main/similarity.pkl
 
 # render expects this
 ENV PORT=10000
