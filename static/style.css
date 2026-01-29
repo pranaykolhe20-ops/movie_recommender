@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 800;
+
+    /* Fallback color */
+    color: #ff512f;
+
+    /* Gradient text */
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.subtitle {
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 16px;
+}
+
+/* Search Section */
+.search-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.search-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.search-section label {
+    font-size: 15px;
+    color: #d1d1d1;
+}
+
+.search-section select {
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+.search-section button {
+    width: 205px;          /* 🔽 slightly narrower */
+    padding: 9px 14px;     /* 🔽 reduced height */
+    font-size: 14px;       /* 🔽 text slightly smaller */
+    border-radius: 9px;
+}
+
+
+.search-section button:hover {
+    transform: scale(1.05);
+}
+
+/* Recommendation Section */
+.recommend-section {
+    margin-top: 15px;          /* 🔼 moved up ~1 inch */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Horizontal scroll row */
+.recommend-row {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.recommend-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Movie Card */
+.movie-card {
+    width: 220px;              /* 🔥 Bigger width */
+    background-color: #111;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 320px;             /* 🔥 Bigger height */
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+.movie-card p {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e5e5e5;
+}
+
+
+.movie-card:hover {
+    transform: scale(1.08);
+}
+
+.search-section input {
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.search-section input::placeholder {
+    color: #aaa;
+}
+
+/* Center wrapper */
+.button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* Recommend button */
+.search-section button {
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* 🔵 new blue gradient */
+    color: white;
+
+    width: 180px;              /* 🔽 smaller width */
+    padding: 8px 14px;         /* 🔽 smaller height */
+    font-size: 13.5px;         /* 🔽 slightly smaller text */
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.search-section button:hover {
+    transform: scale(1.06);
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+}

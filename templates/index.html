@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1 class="title">🎬 Movie Recommender System</h1>
+    <p class="subtitle">
+        Discover movies you’ll love — powered by AI & similarity intelligence ✨
+    </p>
+</div>
+
+<!-- Search Section -->
+<div class="search-section">
+    <form method="POST">
+        <label>Select a movie you enjoyed</label>
+
+        <input 
+    type="text" 
+    name="movie" 
+    list="movie-list" 
+    placeholder="Type to search a movie..." 
+    required
+>
+
+<datalist id="movie-list">
+    {% for movie in movie_list %}
+        <option value="{{ movie }}">
+    {% endfor %}
+</datalist>
+
+
+
+        <div class="button-center">
+    <button type="submit">🎬 Recommend Movies</button>
+</div>
+
+    </form>
+</div>
+
+<!-- Recommendations -->
+{% if recommendations %}
+<div class="recommend-section">
+    <h2>🔥 Recommended For You</h2>
+
+    <div class="recommend-row">
+        {% for movie in recommendations %}
+        <div class="movie-card">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+            <p>{{ movie.title }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>
